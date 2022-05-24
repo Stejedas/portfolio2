@@ -4,6 +4,29 @@
         padding: 0px 15px;
          text-decoration: none;
     }
+    .containerDescription_skills_justify{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        
+    
+    }
+    .description_skills_form{
+        width: 100%;
+         height: 300px;
+         background-color: tomato;
+         
+     }
+     .animationcube_skills_form{
+         width: 100%;
+        text-align: center;
+        height: 250px;
+         margin-top: 40px;
+         display: flex;
+        justify-content: center;
+       
+     }
 }
 
 
@@ -12,6 +35,29 @@
         padding: 0px 75px;
          text-decoration: none;
     }
+    .containerDescription_skills_justify{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        
+    
+    }
+    .description_skills_form{
+        width: 100%;
+         height: 300px;
+         background-color: tomato;
+         
+     }
+     .animationcube_skills_form{
+       
+        text-align: center;
+        height: 250px;
+         margin-top: 40px;
+         display: flex;
+         justify-content: center;
+       
+     }
 }
 
 
@@ -24,6 +70,30 @@
         padding: 0px 75px;
          text-decoration: none;
     }
+    .containerDescription_skills_justify{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 80%;
+        
+    
+    }
+    .description_skills_form{
+        width: 100%;
+         height: 300px;
+         background-color: tomato;
+         
+     }
+     .animationcube_skills_form{
+       
+        text-align: center;
+        height: 250px;
+         margin-top: 40px;
+         display: flex;
+         justify-content: center;
+       
+       
+     }
 }
 
 
@@ -36,6 +106,27 @@
         padding: 0px 75px;
          text-decoration: none;
     }
+    .containerDescription_skills_justify{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+        width: 80%;
+        
+    
+    }
+    .description_skills_form{
+        width: 60%;
+         height: 300px;
+         background-color: tomato;
+         
+     }
+     .animationcube_skills_form{
+         width: 40%;
+     
+         margin-top: 30px;
+         display: flex;
+         justify-content: center;
+     }
 }
 
 
@@ -125,29 +216,39 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.containerDescription_skills_justify{
+
+
+
+
+.container_skills_form{
+ width: 100%;
+ margin-top: 30px;
+ display: flex;
+ justify-content: center;
+}
+
+.listSkills_skills_display{
+    width: 80%;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 80%;
-    background-color: grey;
 
 }
 
-.description_skills_form{
-    width: 50%;
-    
+.animation_cube_position{
+    width: 200px;
 }
-.animationcube_skills_form{
-    width: 50%;
-    height: 500px;
-    display: flex;
-    justify-content: center;
+.typeSkills_skills_form{
+    padding: 5px 10px;
+    margin: 5px 5px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    border: 1px solid grey;
 }
-
-
 
 
 
