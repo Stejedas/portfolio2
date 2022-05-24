@@ -1,6 +1,8 @@
 import imgMe from "../../../src/Assets/pictureMe.jpeg";
 import React, { useState } from "react";
-import { Modal, Button } from "antd";
+import { Modal, Button, Divider } from "antd";
+import { BsFillFileEarmarkPersonFill } from 'react-icons/bs'
+import cv from '../../Assets/pdf/CVSergioTejeda.pdf'
 
 function Presentation() {
   const [loading, setLoading] = useState(false);
@@ -10,11 +12,14 @@ function Presentation() {
     setVisible(true);
   };
 
-  const handleOk = () => {
+  const handleOk = (e) => {
+    e.preventDefault()
+    console.log(e.target)
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       setVisible(false);
+      
     }, 3000);
   };
 
@@ -82,31 +87,12 @@ function Presentation() {
       <Modal
         visible={visible}
         title="Contacto"
-        onOk={handleOk}
-        onCancel={handleCancel}
-        footer={[
-          <Button key="back" onClick={handleCancel}>
-            Return
-          </Button>,
-          <Button
-            key="submit"
-            type="primary"
-            loading={loading}
-            onClick={handleOk}
-          >
-            Submit
-          </Button>,
-          <Button
-            key="link"
-            href="https://google.com"
-            type="primary"
-            loading={loading}
-            onClick={handleOk}
-          >
-            Search on Google
-          </Button>,
-        ]}
+        onCancel={() => setVisible(false)}
+        width={800}
+        style={{'margin-top': '10px'}}
+        footer={null}
       >
+      <div className="container_modal_direction">
         <form className="contact_Form_form prueba">
           <li>
             <label for="name">Nombre: </label>
@@ -118,10 +104,27 @@ function Presentation() {
           </li>
           <li>
             <label for="mensage">Mensaje: </label>
-            <textarea name="mensage" className="prueba2" ></textarea>
+            <textarea name="mensage" className="prueba2" style={{height: "200px"}}  ></textarea>
           </li>
-          
+          <div className="modal_contact_buttons">
+          <button key="back" onClick={handleCancel}>
+            Cancelar
+          </button>
+          <button
+            key="submit"
+            type="primary"
+            loading={loading}
+            onClick={handleOk}
+          >
+            Enviar
+          </button>
+          </div>
         </form>
+        <div className="container_modal_downloadCV">
+          <h5>CV</h5>
+          <a href={cv} style={{'padding-bottom': '10px'}} download='CV_Sergio_Tejeda.pdf'><BsFillFileEarmarkPersonFill fontSize={60} color={'grey'}/></a>
+        </div>
+        </div>
       </Modal>
     </>
   );
