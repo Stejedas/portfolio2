@@ -1,9 +1,31 @@
 import imgMe from "../../../src/Assets/pictureMe.jpeg";
+import React, { useState } from "react";
+import { Modal, Button } from "antd";
 
 function Presentation() {
+  const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setVisible(false);
+    }, 3000);
+  };
+
+  const handleCancel = () => {
+    setVisible(false);
+  };
+  console.log(visible);
+
   return (
     <>
-      <div className="presentation_img_w100">
+      <div className="presentation_img_w100" onClick={showModal}>
         <img
           src={imgMe}
           alt="Sergio Tejeda"
@@ -53,9 +75,54 @@ function Presentation() {
           </p>
         </div>
       </div>
-      <div className="description_contact_button">
+      <div className="description_contact_button" onClick={showModal}>
         <div className="description_button_style"> Contacto </div>
       </div>
+
+      <Modal
+        visible={visible}
+        title="Contacto"
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            Return
+          </Button>,
+          <Button
+            key="submit"
+            type="primary"
+            loading={loading}
+            onClick={handleOk}
+          >
+            Submit
+          </Button>,
+          <Button
+            key="link"
+            href="https://google.com"
+            type="primary"
+            loading={loading}
+            onClick={handleOk}
+          >
+            Search on Google
+          </Button>,
+        ]}
+      >
+        <form className="contact_Form_form prueba">
+          <li>
+            <label for="name">Nombre: </label>
+            <input type="text" name="name" maxlength="100" className="prueba2" />
+          </li>
+          <li>
+            <label for="email">Email: </label>
+            <input type="email" name="email" maxlength="100" className="prueba2" />
+          </li>
+          <li>
+            <label for="mensage">Mensaje: </label>
+            <textarea name="mensage" className="prueba2" ></textarea>
+          </li>
+          
+        </form>
+      </Modal>
     </>
   );
 }

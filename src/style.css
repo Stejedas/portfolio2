@@ -236,6 +236,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 
 }
 
@@ -254,16 +255,59 @@
 
 
 
+.prueba li{
+	display: block;
+	padding: 9px;
+	border:1px solid #DDDDDD;
+	margin-bottom: 30px;
+	border-radius: 3px;
+}
+.prueba li:last-child{
+	border:none;
+	margin-bottom: 0px;
+	text-align: center;
+}
+.prueba li > label{
+	display: block;
+	float: left;
+    position: absolute;
+	margin-top: -19px;
+	background: #ffffff;
+	height: 14px;
+	padding: 2px 5px 2px 5px;
+	
+	font-size: 14px;
+	overflow: hidden;
+	font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 20px;
+}
+.prueba input[type="text"],
+.prueba input[type="email"],
+.prueba textarea {
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	display: block;
+	outline: none;
+	border: none;
+	height: 25px;
+	line-height: 25px;
+	font-size: 16px;
+	padding: 0;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
 
 
+.prueba2{
+    width: 100%;
+}
 
 
-
-
-
-
-
-
+.contact_Form_form{
+    display: flex;
+    flex-direction: column;
+}
 
 
 /* cube */

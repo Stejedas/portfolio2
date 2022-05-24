@@ -8,6 +8,7 @@ import {
 } from "react-icons/di";
 import { useState } from "react";
 
+
 function Skills() {
   const arraySkills = [
     "React",
@@ -118,7 +119,9 @@ function Skills() {
           })}
         </div>
       </div>
-    </>
+  
+
+      </>
   );
 }
 
