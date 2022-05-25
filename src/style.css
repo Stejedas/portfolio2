@@ -40,6 +40,17 @@
     justify-content: center;
     align-items: center;
   }
+  .footer_container_form {
+    width: 100%;
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -83,6 +94,17 @@
     width: 20%;
     justify-content: center;
     align-items: center;
+  }
+  .footer_container_form {
+    width: 100%;
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
   }
 }
 
@@ -130,6 +152,17 @@
     width: 20%;
     justify-content: center;
     align-items: center;
+  }
+  .footer_container_form {
+    width: 100%;
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
   }
 }
 
@@ -181,6 +214,17 @@
     width: 20%;
     justify-content: center;
     align-items: center;
+  }
+  .footer_container_form {
+    width: 100%;
+    height: auto;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 15px;
   }
 }
 
@@ -430,16 +474,7 @@
 
 /* FOOTER */
 
-.footer_container_form {
-  width: 100%;
-  height: auto;
-  background-color: grey;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 10px;
-}
+
 .footer_rrss_form {
   display: flex;
   flex-direction: row;
@@ -477,6 +512,7 @@
   padding: 5px;
   background-color: grey;
   border-radius: 10px;
+  
 }
 
 .button_contact {
@@ -538,11 +574,17 @@
   top: 0;
 }
 
+.footer_rrhh_icons:hover{
+    color: white;
+    cursor: pointer;
+}
+
 /* BUTTON MODAL SUBMIT */
 .modal_container_submit {
   position: relative;
   border-radius: 10px;
-    overflow: hidden;
+  overflow: hidden;
+  margin-left: 10px;
 }
 .modal_submit_contact {
   display: inline-flex;
@@ -558,7 +600,6 @@
   text-transform: uppercase;
   transition: 0.5s ease-in-out all;
   border-radius: 5px;
-  
 }
 .modal_submit_contact span {
   position: relative;
@@ -581,5 +622,54 @@
 
 .modal_submit_contact:hover::after {
   top: 0;
-  
 }
+
+.modal_container_cancel {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  .modal_cancel_contact {
+    display: inline-flex;
+    width: 120px;
+    height: 40px;
+    color: black;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out all;
+    border-radius: 5px;
+  }
+  .modal_cancel_contact span {
+    position: relative;
+    z-index: 2;
+    transition: 0.3 ease all;
+  }
+  
+  .modal_cancel_contact::after {
+    content: "";
+    width: 120px;
+    height: 200px;
+    border-radius: 0px 0px 100% 100%;
+    background-color: rgb(244, 100, 100);
+    position: absolute;
+    z-index: 1;
+    top: -200px;
+    left: 0;
+    transition: 0.8s ease-in-out all;
+  }
+  
+  .modal_cancel_contact:hover::after {
+    top: 0;
+  }
+
+  .container_contact{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+  }

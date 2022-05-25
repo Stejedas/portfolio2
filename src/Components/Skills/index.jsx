@@ -21,7 +21,7 @@ function Skills() {
     "Boostrap",
     "GIT",
     "TypeScript",
-    "Responsibe web desing",
+    "Responsive web desing",
   ];
 
   const [selectedSkill, updateSkill] = useState("none");

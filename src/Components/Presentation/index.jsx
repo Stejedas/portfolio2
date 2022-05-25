@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Modal, Button, Divider } from "antd";
 import { BsFillFileEarmarkPersonFill } from "react-icons/bs";
 import cv from "../../Assets/pdf/CVSergioTejeda.pdf";
+import emailjs from '@emailjs/browser';
 
 function Presentation() {
   const [loading, setLoading] = useState(false);
@@ -25,7 +26,17 @@ function Presentation() {
   const handleCancel = () => {
     setVisible(false);
   };
-  console.log(visible);
+  
+
+  const sendEmail = e => {
+    e.preventDefault()
+    console.log('hola')
+    emailjs.sendForm('service_m5gaves','template_7d06myf',e.target,'nZ8pq_vJo9drXEAwA').then(res=>{
+        
+        console.log(res)
+    })
+    setVisible(false);
+}
 
   return (
     <>
@@ -100,13 +111,14 @@ function Presentation() {
         footer={null}
       >
         <div className="container_modal_direction">
-          <form className="contact_Form_form prueba" onSubmit={handleOk}>
+          <form className="contact_Form_form prueba" onSubmit={sendEmail}>
             <li>
               <label for="name">Nombre: </label>
               <input
                 required
+                id="name"
+                name="from_name"
                 type="text"
-                name="name"
                 maxlength="100"
                 className="prueba2"
               />
@@ -116,24 +128,33 @@ function Presentation() {
               <input
                 required
                 type="email"
-                name="email"
+               
                 maxlength="100"
                 className="prueba2"
+                id="email" 
+                name="reply_to"
               />
             </li>
             <li>
               <label for="mensage">Mensaje: </label>
               <textarea
                 required
-                name="mensage"
                 className="prueba2"
                 style={{ height: "200px" }}
+                id="message" 
+                name="message" 
               ></textarea>
             </li>
             <div className="modal_contact_buttons">
-              <button key="back" onClick={handleCancel}>
-                Cancelar
-              </button>
+              <div className="modal_container_cancel">
+                <button
+                  key="back"
+                  onClick={handleCancel}
+                  className="modal_cancel_contact"
+                >
+                  <span> Cancelar </span>
+                </button>
+              </div>
               <div className="modal_container_submit">
                 <button
                   key="submit"
