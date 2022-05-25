@@ -45,7 +45,7 @@ function Presentation() {
         </div>
       </div>
       <div className="presentation_container">
-        <h4>Junior Front-end</h4>
+        <h4>Junior Front-end Developer</h4>
       </div>
       <div className="presentation_contaienerDescription_form">
         <div className="presentation_description_form">
@@ -96,28 +96,28 @@ function Presentation() {
         <form className="contact_Form_form prueba">
           <li>
             <label for="name">Nombre: </label>
-            <input type="text" name="name" maxlength="100" className="prueba2" />
+            <input required type="text" name="name" maxlength="100" className="prueba2" />
           </li>
           <li>
             <label for="email">Email: </label>
-            <input type="email" name="email" maxlength="100" className="prueba2" />
+            <input required type="email" name="email" maxlength="100" className="prueba2" />
           </li>
           <li>
             <label for="mensage">Mensaje: </label>
-            <textarea name="mensage" className="prueba2" style={{height: "200px"}}  ></textarea>
+            <textarea required name="mensage" className="prueba2" style={{height: "200px"}}  ></textarea>
           </li>
           <div className="modal_contact_buttons">
-          <button key="back" onClick={handleCancel}>
+          <Button key="back" onClick={handleCancel}>
             Cancelar
-          </button>
-          <button
+          </Button>
+          <Button
             key="submit"
             type="primary"
             loading={loading}
             onClick={handleOk}
           >
             Enviar
-          </button>
+          </Button>
           </div>
         </form>
         <div className="container_modal_downloadCV">
