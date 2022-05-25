@@ -6,8 +6,8 @@ import {
   DiReact,
   DiJsBadge,
 } from "react-icons/di";
-import { useState } from "react";
-
+import { useEffect, useState } from "react";
+import { arrayAllLeng } from "../../Assets/data";
 
 function Skills() {
   const arraySkills = [
@@ -24,9 +24,21 @@ function Skills() {
     "Responsive web desing",
   ];
 
-  const [selectedSkill, updateSkill] = useState("none");
+  const [selectedSkill, updateSkill] = useState("CSS");
+
+  const [arraySeeSkill, uploadSeeSkills] = useState([]);
 
   console.log(selectedSkill);
+
+  const pruebaskillMastery = (value) => {
+    arrayAllLeng.filter((e) => (e.name === value ? uploadSeeSkills(e) : ""));
+  };
+
+  useEffect(() => {
+    pruebaskillMastery(selectedSkill);
+  }, [selectedSkill]);
+
+  console.log(arraySeeSkill);
 
   const skillMastery = (value) => {
     switch (value) {
@@ -55,7 +67,6 @@ function Skills() {
       case "Responsive web desing":
         return <p>Responsive</p>;
       default:
-     
     }
   };
 
@@ -64,37 +75,40 @@ function Skills() {
       <div className="container_skills">
         <h3>Skills</h3>
         <div className="containerDescription_skills_justify">
-          
-
           <div className="animationcube_skills_form">
-          <div className="animation_cube_position">
-            <div className="cubespinner">
-              <div className="face1 cubediv">
-                <DiReact />
+            <div className="animation_cube_position">
+              <div className="cubespinner">
+                <div className="face1 cubediv">
+                  <DiReact />
+                </div>
+                <div className="face2 cubediv">
+                  <DiCss3 />
+                </div>
+                <div className="face3 cubediv">
+                  <DiNodejsSmall />
+                </div>
+                <div className="face4 cubediv">
+                  <DiHtml5 />
+                </div>
+                <div className="face5 cubediv">
+                  <DiJsBadge />
+                </div>
+                <div className="face6 cubediv">
+                  <DiMongodb />
+                </div>
               </div>
-              <div className="face2 cubediv">
-                <DiCss3 />
-              </div>
-              <div className="face3 cubediv">
-                <DiNodejsSmall />
-              </div>
-              <div className="face4 cubediv">
-                <DiHtml5 />
-              </div>
-              <div className="face5 cubediv">
-                <DiJsBadge />
-              </div>
-              <div className="face6 cubediv">
-                <DiMongodb />
-              </div>
-            </div>
             </div>
           </div>
 
           <div className="description_skills_form">
-            {skillMastery(selectedSkill)}
-          </div>
+            <h1>{arraySeeSkill.name}</h1>
+            <ol>
+              {arraySeeSkill.skills?.map((e) => {
+                return <li>{e}</li>
+              })}
+            </ol>
 
+          </div>
         </div>
       </div>
       <div className="container_skills_form">
@@ -104,13 +118,13 @@ function Skills() {
               <>
                 <div
                   key={i}
-                  onMouseLeave={()=> {
-                    updateSkill('none');
+                  onMouseLeave={() => {
+                    updateSkill("none");
                   }}
                   onMouseEnter={() => {
                     updateSkill(e);
                   }}
-                  className='typeSkills_skills_form'
+                  className="typeSkills_skills_form"
                 >
                   {e}
                 </div>
@@ -119,9 +133,7 @@ function Skills() {
           })}
         </div>
       </div>
-  
-
-      </>
+    </>
   );
 }
 
