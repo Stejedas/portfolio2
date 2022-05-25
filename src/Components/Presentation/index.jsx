@@ -1,8 +1,8 @@
 import imgMe from "../../../src/Assets/pictureMe.jpeg";
 import React, { useState } from "react";
 import { Modal, Button, Divider } from "antd";
-import { BsFillFileEarmarkPersonFill } from 'react-icons/bs'
-import cv from '../../Assets/pdf/CVSergioTejeda.pdf'
+import { BsFillFileEarmarkPersonFill } from "react-icons/bs";
+import cv from "../../Assets/pdf/CVSergioTejeda.pdf";
 
 function Presentation() {
   const [loading, setLoading] = useState(false);
@@ -13,13 +13,12 @@ function Presentation() {
   };
 
   const handleOk = (e) => {
-    e.preventDefault()
-    console.log(e.target)
+    e.preventDefault();
+    console.log(e.target);
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
       setVisible(false);
-      
     }, 3000);
   };
 
@@ -81,7 +80,15 @@ function Presentation() {
         </div>
       </div>
       <div className="description_contact_button" onClick={showModal}>
-        <div className="description_button_style"> Contacto </div>
+        <div className="container_button_contact">
+          <button className="button_contact">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Contacto{" "}
+          </button>
+        </div>
       </div>
 
       <Modal
@@ -89,41 +96,66 @@ function Presentation() {
         title="Contacto"
         onCancel={() => setVisible(false)}
         width={800}
-        style={{'margin-top': '10px'}}
+        style={{ "margin-top": "10px" }}
         footer={null}
       >
-      <div className="container_modal_direction">
-        <form className="contact_Form_form prueba">
-          <li>
-            <label for="name">Nombre: </label>
-            <input required type="text" name="name" maxlength="100" className="prueba2" />
-          </li>
-          <li>
-            <label for="email">Email: </label>
-            <input required type="email" name="email" maxlength="100" className="prueba2" />
-          </li>
-          <li>
-            <label for="mensage">Mensaje: </label>
-            <textarea required name="mensage" className="prueba2" style={{height: "200px"}}  ></textarea>
-          </li>
-          <div className="modal_contact_buttons">
-          <Button key="back" onClick={handleCancel}>
-            Cancelar
-          </Button>
-          <Button
-            key="submit"
-            type="primary"
-            loading={loading}
-            onClick={handleOk}
-          >
-            Enviar
-          </Button>
+        <div className="container_modal_direction">
+          <form className="contact_Form_form prueba" onSubmit={handleOk}>
+            <li>
+              <label for="name">Nombre: </label>
+              <input
+                required
+                type="text"
+                name="name"
+                maxlength="100"
+                className="prueba2"
+              />
+            </li>
+            <li>
+              <label for="email">Email: </label>
+              <input
+                required
+                type="email"
+                name="email"
+                maxlength="100"
+                className="prueba2"
+              />
+            </li>
+            <li>
+              <label for="mensage">Mensaje: </label>
+              <textarea
+                required
+                name="mensage"
+                className="prueba2"
+                style={{ height: "200px" }}
+              ></textarea>
+            </li>
+            <div className="modal_contact_buttons">
+              <button key="back" onClick={handleCancel}>
+                Cancelar
+              </button>
+              <div className="modal_container_submit">
+                <button
+                  key="submit"
+                  type="submit"
+                  loading={loading}
+                  className="modal_submit_contact"
+                >
+                  <span> Enviar </span>
+                </button>
+              </div>
+            </div>
+          </form>
+          <div className="container_modal_downloadCV">
+            <h5>CV</h5>
+            <a
+              href={cv}
+              style={{ "padding-bottom": "10px" }}
+              download="CV_Sergio_Tejeda.pdf"
+            >
+              <BsFillFileEarmarkPersonFill fontSize={60} color={"grey"} />
+            </a>
           </div>
-        </form>
-        <div className="container_modal_downloadCV">
-          <h5>CV</h5>
-          <a href={cv} style={{'padding-bottom': '10px'}} download='CV_Sergio_Tejeda.pdf'><BsFillFileEarmarkPersonFill fontSize={60} color={'grey'}/></a>
-        </div>
         </div>
       </Modal>
     </>

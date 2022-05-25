@@ -1,7 +1,7 @@
 import Header from "../../Components/Header"
 import Presentation from "../../Components/Presentation";
 import Skills from "../../Components/Skills";
-
+import Footer from "../../Components/Footer";
 
 
 function HomePage () {
@@ -11,6 +11,7 @@ function HomePage () {
             <Header></Header>
             <Presentation></Presentation>
             <Skills></Skills>
+            <Footer></Footer>
         </>
     )
 }
