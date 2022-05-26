@@ -2,8 +2,8 @@ import { IoLogoJavascript, IoLogoReact, IoLogoCss3 } from "react-icons/io";
 
 export const arrayAllLeng = [
   {
-    name: "JavaScript",
-    skills: [
+    "name": "JavaScript",
+    "skills": [
       "Estructura de datos y colecciones",
       "Creacion, usar y recorrer arrays",
       "Busca y orientacion utilizando arrays",
@@ -25,12 +25,11 @@ export const arrayAllLeng = [
       "Bubles",
       "Creacion y uso de funciones",
       "Gestion de parametros en funciones",
-      "Condicionales"
+      "Condicionales",
     ],
 
-    logo: (
-      ""
-    ) /* vamos a probar a ver si funciona y si no lo quito */,
+    "logo": "",
+    "class": "cube_stop_js" /* vamos a probar a ver si funciona y si no lo quito */,
   },
   {
     name: "React",
@@ -60,34 +59,57 @@ export const arrayAllLeng = [
       "Introduccion al CI/CD",
     ],
     logo: "",
+    "class": "cube_stop_react" 
   },
   {
-    name: "CSS",
+    name: "CSS, SASS",
     skills: [
-        "Definicion de hojas de estilos y propiedades basicas", 
-        "Box Model", 
-        "Selectores",
-        "Herencia",
-        "Posiciones",
-        "Layout con Flex y Grid",
-        "Responsive Adaptive Design: Media Querys",
-        "BEM",
-        "Preprocesadores",
-        "SASS",
-        "Variables",
-        "Partials",
-        "Mixins",
-        "Modules",
-        "Herencia",
-        "Operadores",
-        "Funciones",
-        "ITCSS BEMIT",
-        "Creacion de variables y constantes"
-
+      "Definicion de hojas de estilos y propiedades basicas",
+      "Box Model",
+      "Selectores",
+      "Herencia",
+      "Posiciones",
+      "Layout con Flex y Grid",
+      "Responsive Adaptive Design: Media Querys",
+      "BEM",
+      "Preprocesadores",
+      "SASS",
+      "Variables",
+      "Partials",
+      "Mixins",
+      "Modules",
+      "Herencia",
+      "Operadores",
+      "Funciones",
+      "ITCSS BEMIT",
+      "Creacion de variables y constantes",
+      "Boostrap - Art",
     ],
-    "logo": ""
+    logo: "",
+    "class": "cube_stop_css" 
   },
   {
-      "name": "none"
+    name: "HTML",
+    skills: ["", ""],
+    logo: "",
+    "class": "cube_stop_html" 
+  },
+  {
+    name: "GIT",
+    skills: ["", ""],
+    logo: "",
+    "class": "cube_stop_git" 
+  },
+  {
+    name: "OTROS",
+    skills: ["", ""],
+    logo: "",
+    "class": "cube_stop_other" 
+  },
+  {
+    name: "none",
+    skills: ["", ""],
+    logo: "",
+    "class": "cubespinner" 
   }
 ];

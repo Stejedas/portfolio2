@@ -429,8 +429,36 @@
   align-items: center;
   box-shadow: 0 0 20px 0px lightgrey;
   background-color: rgb(250, 250, 250, 0.7);
+  padding: 30px;
 }
-
+.cubediv_special{
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 200px;
+  height: 200px;
+  border: 1px solid #ccc;
+  background: rgba(255, 255, 255, 0.4);
+  text-align: center;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 0px lightgrey;
+  background-color: rgb(250, 250, 250, 0.7);
+  padding: 30px;
+}
+.icons_cube_specialAll{
+  width: 25%;
+  height: 50%;
+  padding: 2px;
+}
+.icons_cube_special{
+  width: 50%;
+  height: 50%;
+  padding: 2px;
+}
 .face1 {
   transform: translateZ(100px);
 }
@@ -672,4 +700,43 @@
     width: 150px;
     display: flex;
     justify-content: center;
+  }
+
+
+  /* BUTTONS SKILLS */
+  .css-button-arrow--sand {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: #aeb3b8
+  }
+  .css-button-arrow--sand:hover {
+    border-radius: 5px;
+    padding-right: 24px;
+    padding-left:8px;
+  }
+  .css-button-arrow--sand:hover:after {
+    opacity: 1;
+    right: 10px;
+  }
+  .css-button-arrow--sand:after {
+    content: "\00BB";
+    position: absolute;
+    opacity: 0;
+    font-size: 30px;
+    line-height: 40px;
+    top: 0;
+    right: -20px;
+    transition: 0.4s;
+    transform: rotate(-90deg);
   }

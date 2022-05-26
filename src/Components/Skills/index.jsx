@@ -1,74 +1,126 @@
 import {
-  DiMongodb,
+  DiGithubBadge,
   DiNodejsSmall,
   DiCss3,
   DiHtml5,
   DiReact,
   DiJsBadge,
+  DiAngularSimple,
+  DiSass,
+  DiMongodb,
+  DiVisualstudio
+  
 } from "react-icons/di";
+import {
+  FaBootstrap 
+} from 'react-icons/fa'
+import {
+  SiTypescript,
+  SiExpress,
+  SiNetlify,
+  SiVuetify,
+  SiGitkraken  
+} from 'react-icons/si'
 import { useEffect, useState } from "react";
 import { arrayAllLeng } from "../../Assets/data";
 
 function Skills() {
-  const arraySkills = [
-    "React",
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Node.JS",
-    "MongoDB",
-    "SASS",
-    "Boostrap",
-    "GIT",
-    "TypeScript",
-    "Responsive web desing",
-  ];
+  const [selectedSkill, setSelectedSkill] = useState("none");
 
-  const [selectedSkill, updateSkill] = useState("CSS");
+  const [arraySeeSkill, setSeeSkills] = useState([]);
 
-  const [arraySeeSkill, uploadSeeSkills] = useState([]);
-
-  console.log(selectedSkill);
+  const [classUnicCube, setClassUnicCube] = useState("cubespinner");
 
   const pruebaskillMastery = (value) => {
-    arrayAllLeng.filter((e) => (e.name === value ? uploadSeeSkills(e) : ""));
+    arrayAllLeng.filter((e) => (e.name === value ? setSeeSkills(e) : ""));
   };
 
   useEffect(() => {
     pruebaskillMastery(selectedSkill);
   }, [selectedSkill]);
 
-  console.log(arraySeeSkill);
-
-  const skillMastery = (value) => {
-    switch (value) {
-      case "none":
-        return <p>none</p>;
-      case "CSS":
-        return <p>css</p>;
-      case "JavaScript":
-        return <p>JS</p>;
-      case "HTML":
-        return <p>HTML</p>;
-      case "React":
-        return <p>React</p>;
-      case "Node.JS":
-        return <p>Node.JS</p>;
-      case "MongoDB":
-        return <p>MongoDB</p>;
-      case "SASS":
-        return <p>SASS</p>;
-      case "Boostrap":
-        return <p>Boostrap</p>;
-      case "GIT":
-        return <p>GIT</p>;
-      case "TypeScript":
-        return <p>TypeScript</p>;
-      case "Responsive web desing":
-        return <p>Responsive</p>;
-      default:
+  const cubeChangeSkills = (value) => {
+    if (value === "cubespinner") {
+      return (
+        <div className="cubespinner">
+          <div className="face1 cubediv">
+            <DiReact />
+          </div>
+          <div className="face2 cubediv">
+            <DiCss3 />
+            <DiSass />
+          </div>
+          <div className="face3 cubediv_special">
+      <SiTypescript className="icons_cube_specialAll" />
+      <DiAngularSimple className="icons_cube_specialAll"/>
+      <FaBootstrap className="icons_cube_specialAll"/>
+     
+      <DiMongodb className="icons_cube_specialAll"/>
+      <SiExpress className="icons_cube_specialAll"/>
+      <SiNetlify className="icons_cube_specialAll"/>
+      <SiVuetify className="icons_cube_specialAll"/>
+      <DiVisualstudio className="icons_cube_specialAll"/>
+    </div>
+          <div className="face4 cubediv">
+            <DiHtml5 />
+          </div>
+          <div className="face5 cubediv">
+            <DiJsBadge />
+          </div>
+          <div className="face6 cubediv_special">
+            <DiGithubBadge className="icons_cube_special"/>
+            <SiGitkraken className="icons_cube_special" />
+          </div>
+        </div>
+      );
+    } else if (value === "cube_stop_react") {
+      return (
+        <div className="cubediv">
+          <DiReact />
+        </div>
+      );
+    } else if (value === "cube_stop_css") {
+      return (
+        <div className=" cubediv_special">
+          <DiCss3 className="icons_cube_special"/>
+          <DiSass className="icons_cube_special"/>
+        </div>
+      );
+    } else if (value === "cube_stop_html") {
+      return (
+        <div className=" cubediv">
+          <DiHtml5 />
+        </div>
+      );
+    } else if (value === "cube_stop_git") {
+      return (
+        <div className="cubediv_special">
+          <DiGithubBadge className="icons_cube_special"/>
+          <SiGitkraken className="icons_cube_special"/>
+        </div>
+      );
+    } else if (value === "cube_stop_js") {
+      return (
+        <div className=" cubediv">
+          <DiNodejsSmall />
+        </div>
+      );
+    } else if (value === "cube_stop_other"){
+      return  <div className=" cubediv_special">
+      <SiTypescript className="icons_cube_specialAll" />
+      <DiAngularSimple className="icons_cube_specialAll"/>
+      <FaBootstrap className="icons_cube_specialAll"/>
+     
+      <DiMongodb className="icons_cube_specialAll"/>
+      <SiExpress className="icons_cube_specialAll"/>
+      <SiNetlify className="icons_cube_specialAll"/>
+      <SiVuetify className="icons_cube_specialAll"/>
+      <DiVisualstudio className="icons_cube_specialAll"/>
+    </div>
     }
   };
+
+  console.log(classUnicCube);
 
   return (
     <>
@@ -77,60 +129,45 @@ function Skills() {
         <div className="containerDescription_skills_justify">
           <div className="animationcube_skills_form">
             <div className="animation_cube_position">
-              <div className="cubespinner">
-                <div className="face1 cubediv">
-                  <DiReact />
-                </div>
-                <div className="face2 cubediv">
-                  <DiCss3 />
-                </div>
-                <div className="face3 cubediv">
-                  <DiNodejsSmall />
-                </div>
-                <div className="face4 cubediv">
-                  <DiHtml5 />
-                </div>
-                <div className="face5 cubediv">
-                  <DiJsBadge />
-                </div>
-                <div className="face6 cubediv">
-                  <DiMongodb />
-                </div>
-              </div>
+              {cubeChangeSkills(classUnicCube)}
             </div>
           </div>
 
           <div className="description_skills_form">
-            <h1>{arraySeeSkill.name}</h1>
+            <h1>{arraySeeSkill?.name}</h1>
             <ol>
-              {arraySeeSkill.skills?.map((e) => {
-                return <li>{e}</li>
+              {arraySeeSkill?.skills?.map((e) => {
+                return <li>{e}</li>;
               })}
             </ol>
-
           </div>
         </div>
       </div>
       <div className="container_skills_form">
         <div className="listSkills_skills_display">
-          {arraySkills.map((e, i) => {
-            return (
-              <>
-                <div
-                  key={i}
-                  onMouseLeave={() => {
-                    updateSkill("none");
-                  }}
-                  onMouseEnter={() => {
-                    updateSkill(e);
-                  }}
-                  className="typeSkills_skills_form"
-                >
-                  {e}
-                </div>
-              </>
-            );
-          })}
+          {arrayAllLeng
+            .filter((e) => e.name !== "none")
+            .map((e, i) => {
+              return (
+                <>
+                  {" "}
+                  <button
+                    key={i}
+                    onMouseLeave={() => {
+                      setSelectedSkill("none");
+                      setClassUnicCube("cubespinner");
+                    }}
+                    onMouseEnter={() => {
+                      setSelectedSkill(e.name);
+                      setClassUnicCube(e.class);
+                    }}
+                    className="css-button-arrow--sand"
+                  >
+                    {e.name}
+                  </button>
+                </>
+              );
+            })}
         </div>
       </div>
     </>
