@@ -13,9 +13,9 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="header_colapseNav_justify" >
             
-              <Nav.Link href="#home" className="text_link_noneDeco">Home</Nav.Link>
-              <Nav.Link href="#link" className="text_link_noneDeco">Portfolio</Nav.Link>
-           
+              <Nav.Link href="#home" className="ov-btn-grow-skew">Home</Nav.Link>
+              <Nav.Link href="#link" className="ov-btn-grow-skew">Portfolio</Nav.Link>
+             
           </Navbar.Collapse>
         </div>
       </Navbar>

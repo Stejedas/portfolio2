@@ -8,21 +8,19 @@ import {
   DiAngularSimple,
   DiSass,
   DiMongodb,
-  DiVisualstudio
-  
+  DiVisualstudio,
 } from "react-icons/di";
-import {
-  FaBootstrap 
-} from 'react-icons/fa'
+import { FaBootstrap } from "react-icons/fa";
 import {
   SiTypescript,
   SiExpress,
   SiNetlify,
   SiVuetify,
-  SiGitkraken  
-} from 'react-icons/si'
+  SiGitkraken,
+} from "react-icons/si";
 import { useEffect, useState } from "react";
 import { arrayAllLeng } from "../../Assets/data";
+import 'animate.css';
 
 function Skills() {
   const [selectedSkill, setSelectedSkill] = useState("none");
@@ -51,16 +49,16 @@ function Skills() {
             <DiSass />
           </div>
           <div className="face3 cubediv_special">
-      <SiTypescript className="icons_cube_specialAll" />
-      <DiAngularSimple className="icons_cube_specialAll"/>
-      <FaBootstrap className="icons_cube_specialAll"/>
-     
-      <DiMongodb className="icons_cube_specialAll"/>
-      <SiExpress className="icons_cube_specialAll"/>
-      <SiNetlify className="icons_cube_specialAll"/>
-      <SiVuetify className="icons_cube_specialAll"/>
-      <DiVisualstudio className="icons_cube_specialAll"/>
-    </div>
+            <SiTypescript className="icons_cube_specialAll" />
+            <DiAngularSimple className="icons_cube_specialAll" />
+            <FaBootstrap className="icons_cube_specialAll" />
+
+            <DiMongodb className="icons_cube_specialAll" />
+            <SiExpress className="icons_cube_specialAll" />
+            <SiNetlify className="icons_cube_specialAll" />
+            <SiVuetify className="icons_cube_specialAll" />
+            <DiVisualstudio className="icons_cube_specialAll" />
+          </div>
           <div className="face4 cubediv">
             <DiHtml5 />
           </div>
@@ -68,7 +66,7 @@ function Skills() {
             <DiJsBadge />
           </div>
           <div className="face6 cubediv_special">
-            <DiGithubBadge className="icons_cube_special"/>
+            <DiGithubBadge className="icons_cube_special" />
             <SiGitkraken className="icons_cube_special" />
           </div>
         </div>
@@ -82,8 +80,8 @@ function Skills() {
     } else if (value === "cube_stop_css") {
       return (
         <div className=" cubediv_special">
-          <DiCss3 className="icons_cube_special"/>
-          <DiSass className="icons_cube_special"/>
+          <DiCss3 className="icons_cube_special" />
+          <DiSass className="icons_cube_special" />
         </div>
       );
     } else if (value === "cube_stop_html") {
@@ -95,8 +93,8 @@ function Skills() {
     } else if (value === "cube_stop_git") {
       return (
         <div className="cubediv_special">
-          <DiGithubBadge className="icons_cube_special"/>
-          <SiGitkraken className="icons_cube_special"/>
+          <DiGithubBadge className="icons_cube_special" />
+          <SiGitkraken className="icons_cube_special" />
         </div>
       );
     } else if (value === "cube_stop_js") {
@@ -105,21 +103,41 @@ function Skills() {
           <DiNodejsSmall />
         </div>
       );
-    } else if (value === "cube_stop_other"){
-      return  <div className=" cubediv_special">
-      <SiTypescript className="icons_cube_specialAll" />
-      <DiAngularSimple className="icons_cube_specialAll"/>
-      <FaBootstrap className="icons_cube_specialAll"/>
-     
-      <DiMongodb className="icons_cube_specialAll"/>
-      <SiExpress className="icons_cube_specialAll"/>
-      <SiNetlify className="icons_cube_specialAll"/>
-      <SiVuetify className="icons_cube_specialAll"/>
-      <DiVisualstudio className="icons_cube_specialAll"/>
-    </div>
+    } else if (value === "cube_stop_other") {
+      return (
+        <div className=" cubediv_special">
+          <SiTypescript className="icons_cube_specialAll" />
+          <DiAngularSimple className="icons_cube_specialAll" />
+          <FaBootstrap className="icons_cube_specialAll" />
+
+          <DiMongodb className="icons_cube_specialAll" />
+          <SiExpress className="icons_cube_specialAll" />
+          <SiNetlify className="icons_cube_specialAll" />
+          <SiVuetify className="icons_cube_specialAll" />
+          <DiVisualstudio className="icons_cube_specialAll" />
+        </div>
+      );
     }
   };
 
+
+  const descriptionSkills = (value) => {
+    if(value === 'none') {
+        return <div className="description_skills_none animate__animated animate__bounceIn "><h1>HOVER EN UN LENGUAJE</h1></div>
+    } else { return <div className="animate__animated animate__zoomIn"> <h1 className="description_skills_title">{arraySeeSkill?.name}</h1>
+     <div className="description_skills_columns">
+    <ul>
+      {arraySeeSkill?.skills?.map((e, i) => { 
+        return i <= 10 ? <li>{e}</li> : <></>;
+      })}
+    </ul>
+    <ul>
+      {arraySeeSkill?.skills?.map((e, i) => {
+        return i > 10 ? <li>{e}</li> : <></>;
+      })}
+    </ul>
+  </div></div>}
+  }
   console.log(classUnicCube);
 
   return (
@@ -134,12 +152,8 @@ function Skills() {
           </div>
 
           <div className="description_skills_form">
-            <h1>{arraySeeSkill?.name}</h1>
-            <ol>
-              {arraySeeSkill?.skills?.map((e) => {
-                return <li>{e}</li>;
-              })}
-            </ol>
+           
+            {descriptionSkills(arraySeeSkill?.name)}
           </div>
         </div>
       </div>
@@ -161,7 +175,7 @@ function Skills() {
                       setSelectedSkill(e.name);
                       setClassUnicCube(e.class);
                     }}
-                    className="css-button-arrow--sand"
+                    className="css-button-retro--sand"
                   >
                     {e.name}
                   </button>

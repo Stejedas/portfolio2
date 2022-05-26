@@ -1,27 +1,20 @@
 import imgMe from "../../../src/Assets/pictureMe.jpeg";
 import React, { useState } from "react";
-import { Modal, Button, Divider } from "antd";
+import { Modal } from "antd";
 import { BsFillFileEarmarkPersonFill } from "react-icons/bs";
 import cv from "../../Assets/pdf/CVSergioTejeda.pdf";
 import emailjs from '@emailjs/browser';
+import 'animate.css';
 
 function Presentation() {
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [visible, setVisible] = useState(false);
 
   const showModal = () => {
     setVisible(true);
   };
 
-  const handleOk = (e) => {
-    e.preventDefault();
-    console.log(e.target);
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setVisible(false);
-    }, 3000);
-  };
+  
 
   const handleCancel = () => {
     setVisible(false);
@@ -173,6 +166,7 @@ function Presentation() {
               href={cv}
               style={{ "padding-bottom": "10px" }}
               download="CV_Sergio_Tejeda.pdf"
+              className="animate__animated animate__heartBeat"
             >
               <BsFillFileEarmarkPersonFill fontSize={60} color={"grey"} />
             </a>

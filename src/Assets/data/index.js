@@ -62,7 +62,7 @@ export const arrayAllLeng = [
     "class": "cube_stop_react" 
   },
   {
-    name: "CSS, SASS",
+    name: "CSS & SASS",
     skills: [
       "Definicion de hojas de estilos y propiedades basicas",
       "Box Model",

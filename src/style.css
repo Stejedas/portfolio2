@@ -11,16 +11,25 @@
   }
   .description_skills_form {
     width: 100%;
-    height: 300px;
-    background-color: tomato;
+    height: 400px;
+  
   }
+  .description_skills_none{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .animationcube_skills_form {
     width: 100%;
     text-align: center;
-    height: 250px;
-    margin-top: 40px;
+    height: 200px;
+  
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .container_modal_direction {
     display: flex;
@@ -66,15 +75,24 @@
   }
   .description_skills_form {
     width: 100%;
-    height: 300px;
-    background-color: tomato;
+    height: 400;
+    
   }
+  .description_skills_none{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .animationcube_skills_form {
     text-align: center;
     height: 250px;
-    margin-top: 40px;
+    
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .container_modal_direction {
     display: flex;
@@ -124,15 +142,26 @@
   }
   .description_skills_form {
     width: 100%;
-    height: 300px;
-    background-color: tomato;
+    height: 400px;
+   
+  }
+  .description_skills_none{
+    
+      width: 100%;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    
   }
   .animationcube_skills_form {
     text-align: center;
     height: 250px;
-    margin-top: 40px;
+   
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .container_modal_direction {
     display: flex;
@@ -182,15 +211,24 @@
   }
   .description_skills_form {
     width: 60%;
-    height: 300px;
-    background-color: tomato;
+    height: 400px;
+  
   }
+  .description_skills_none{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .animationcube_skills_form {
     width: 40%;
 
-    margin-top: 30px;
+   
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .modal_contact {
     width: 800px;
@@ -288,6 +326,22 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
+.description_skills_title{
+  width: 100%;
+  text-align: center;
+}
+.description_skills_columns{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.description_skills_columns > ul {
+  width: 50%;
+  padding: 20px;
+}
+.description_skills_columns > ul > li {
+  text-align: justify;
+}
 
 .presentation_description_form {
   width: 65%;
@@ -338,6 +392,7 @@
 
 .animation_cube_position {
   width: 200px;
+  height: 200px;
 }
 .typeSkills_skills_form {
   padding: 5px 10px;
@@ -704,7 +759,9 @@
 
 
   /* BUTTONS SKILLS */
-  .css-button-arrow--sand {
+  
+  .css-button-retro--sand {
+    border-radius: 10px;
     min-width: 130px;
     height: 40px;
     color: #fff;
@@ -715,28 +772,58 @@
     position: relative;
     display: inline-block;
     outline: none;
-    overflow: hidden;
-    border-radius: 5px;
-    border: none;
-    background-color: #aeb3b8
+    border: 1px solid #000;
+    color: #000;
+    background: transparent;
   }
-  .css-button-arrow--sand:hover {
-    border-radius: 5px;
-    padding-right: 24px;
-    padding-left:8px;
-  }
-  .css-button-arrow--sand:hover:after {
-    opacity: 1;
-    right: 10px;
-  }
-  .css-button-arrow--sand:after {
-    content: "\00BB";
-    position: absolute;
-    opacity: 0;
-    font-size: 30px;
-    line-height: 40px;
+  .css-button-retro--sand:hover:after {
     top: 0;
-    right: -20px;
-    transition: 0.4s;
-    transform: rotate(-90deg);
+    left: 0;
+  }
+  .css-button-retro--sand:after {
+    content: "";
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 5px;
+    left: 5px;
+    transition: 0.2s;
+    background-color: #ced4da;
+    border-radius: 10px;
+  }
+
+  /*** ESTILOS BOTÓN GROW SKEW ***/
+.ov-btn-grow-skew {
+  background: #fff; /* color de fondo */
+  color: #9f9eb5; /* color de fuente */
+  border: 2px solid #696972; /* tamaño y color de borde */
+  padding: 8px 20px;
+  border-radius: 3px; /* redondear bordes */
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 10px;
+  }
+  .ov-btn-grow-skew:hover {
+  color: #fff;/* color de fuente hover */
+  }
+  .ov-btn-grow-skew::after {
+  content: "";
+  background: #85858b; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.3s ease;
+  }
+  .ov-btn-grow-skew:hover::after {
+  transition: all 0.3s ease-out;
+  transform: skewX(-45deg) scale(1, 1);
   }
