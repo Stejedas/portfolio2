@@ -158,7 +158,7 @@ function Skills() {
         </div>
       </div>
       <div className="container_skills_form">
-        <div className="listSkills_skills_display">
+      <div className="listSkills_skills_display">
           {arrayAllLeng
             .filter((e) => e.name !== "none")
             .map((e, i) => {
