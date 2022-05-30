@@ -154,6 +154,7 @@ function Skills() {
           <div className="description_skills_form">
            
             {descriptionSkills(arraySeeSkill?.name)}
+           
           </div>
         </div>
       </div>
