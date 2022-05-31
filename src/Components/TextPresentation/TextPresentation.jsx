@@ -1,4 +1,4 @@
-import imgMe from "../../../src/Assets/pictureMe.jpeg";
+
 import React, { useState } from "react";
 import { Modal } from "antd";
 import { BsFillFileEarmarkPersonFill } from "react-icons/bs";
@@ -6,7 +6,7 @@ import cv from "../../Assets/pdf/CVSergioTejeda.pdf";
 import emailjs from '@emailjs/browser';
 import 'animate.css';
 
-function Presentation() {
+function TextPresentation() {
   const [loading] = useState(false);
   const [visible, setVisible] = useState(false);
 
@@ -33,25 +33,10 @@ function Presentation() {
 
   return (
     <>
-      <div className="presentation_img_w100" onClick={showModal}>
-        <img
-          src={imgMe}
-          alt="Sergio Tejeda"
-          className="presentation_img_justify presentation_img_form"
-        />
-      </div>
-      <div className="presentation_container">
-        <div className="presentation_title_justify">
-          <div className="presentation_lineTitle_form"></div>
-          <h1> Sergio Tejeda</h1>
-          <div className="presentation_lineTitle_form"></div>
-        </div>
-      </div>
-      <div className="presentation_container">
-        <h4>Junior Front-end Developer</h4>
-      </div>
+     
       <div className="presentation_contaienerDescription_form">
         <div className="presentation_description_form">
+        <h5>Sobre mi:</h5>
           <p>
             Hasta hace poco estaba enfocado en la contabilidad y las empresas.
             Desde la pandemia, descubrí la programación y se convirtió en mi
@@ -177,4 +162,4 @@ function Presentation() {
   );
 }
 
-export default Presentation;
+export default TextPresentation;

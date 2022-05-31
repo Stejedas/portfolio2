@@ -20,7 +20,7 @@ import {
 } from "react-icons/si";
 import { useEffect, useState } from "react";
 import { arrayAllLeng } from "../../Assets/data";
-import 'animate.css';
+import "animate.css";
 
 function Skills() {
   const [selectedSkill, setSelectedSkill] = useState("none");
@@ -120,24 +120,32 @@ function Skills() {
     }
   };
 
-
   const descriptionSkills = (value) => {
-    if(value === 'none') {
-        return <div className="description_skills_none animate__animated animate__bounceIn "><h1>HOVER EN UN LENGUAJE</h1></div>
-    } else { return <div className="animate__animated animate__zoomIn"> <h1 className="description_skills_title">{arraySeeSkill?.name}</h1>
-     <div className="description_skills_columns">
-    <ul>
-      {arraySeeSkill?.skills?.map((e, i) => { 
-        return i <= 10 ? <li>{e}</li> : <></>;
-      })}
-    </ul>
-    <ul>
-      {arraySeeSkill?.skills?.map((e, i) => {
-        return i > 10 ? <li>{e}</li> : <></>;
-      })}
-    </ul>
-  </div></div>}
-  }
+    if (value === "none") {
+      return (
+        <div className="description_skills_none animate__animated animate__bounceIn "></div>
+      );
+    } else {
+      return (
+        <div className="animate__animated animate__zoomIn">
+          {" "}
+          <h1 className="description_skills_title">{arraySeeSkill?.name}</h1>
+          <div className="description_skills_columns">
+            <ul>
+              {arraySeeSkill?.skills?.map((e, i) => {
+                return i <= 10 ? <li>{e}</li> : <></>;
+              })}
+            </ul>
+            <ul>
+              {arraySeeSkill?.skills?.map((e, i) => {
+                return i > 10 ? <li>{e}</li> : <></>;
+              })}
+            </ul>
+          </div>
+        </div>
+      );
+    }
+  };
   console.log(classUnicCube);
 
   return (
@@ -145,46 +153,48 @@ function Skills() {
       <div className="container_skills">
         <h3>Skills</h3>
         <div className="containerDescription_skills_justify">
-          <div className="animationcube_skills_form">
-            <div className="animation_cube_position">
+          <div className="listSkills_skills_display">
+            {arrayAllLeng
+              .filter((e) => e.name !== "none")
+              .map((e, i) => {
+                return (
+                  <>
+                    {" "}
+                    <button
+                      key={i}
+                      onMouseLeave={() => {
+                        setSelectedSkill("none");
+                        setClassUnicCube("cubespinner");
+                      }}
+                      onMouseEnter={() => {
+                        setSelectedSkill(e.name);
+                        setClassUnicCube(e.class);
+                      }}
+                      className="css-button-sliding-to-bottom--sand"
+                    >
+                      {e.name}
+                    </button>
+                  </>
+                );
+              })}
+          </div>
+          <div className={`animationcube_skills_form ${selectedSkill}_cube`}>
+            <div className="animation_cube_position ">
               {cubeChangeSkills(classUnicCube)}
             </div>
           </div>
 
-          <div className="description_skills_form">
-           
+          <div
+            className={`description_skills_form ${selectedSkill}_description`}
+          >
             {descriptionSkills(arraySeeSkill?.name)}
-           
           </div>
         </div>
       </div>
-      <div className="container_skills_form">
-      <div className="listSkills_skills_display">
-          {arrayAllLeng
-            .filter((e) => e.name !== "none")
-            .map((e, i) => {
-              return (
-                <>
-                  {" "}
-                  <button
-                    key={i}
-                    onMouseLeave={() => {
-                      setSelectedSkill("none");
-                      setClassUnicCube("cubespinner");
-                    }}
-                    onMouseEnter={() => {
-                      setSelectedSkill(e.name);
-                      setClassUnicCube(e.class);
-                    }}
-                    className="css-button-retro--sand"
-                  >
-                    {e.name}
-                  </button>
-                </>
-              );
-            })}
-        </div>
-      </div>
+      <div className="container_skills_form"></div>
+
+   
+    
     </>
   );
 }
