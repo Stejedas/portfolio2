@@ -150,7 +150,7 @@ function Skills() {
 
   return (
     <>
-      <div className="container_skills">
+      <div className="container_skills" >
         <h3>Skills</h3>
         <div className="containerDescription_skills_justify">
           <div className="listSkills_skills_display">
@@ -170,7 +170,7 @@ function Skills() {
                         setSelectedSkill(e.name);
                         setClassUnicCube(e.class);
                       }}
-                      className="css-button-sliding-to-bottom--sand"
+                      className="css-button-sliding-to-bottom--sand "
                     >
                       {e.name}
                     </button>

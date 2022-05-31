@@ -39,17 +39,17 @@ function Footer() {
     <>
       <footer className="footer_container_form">
         <div className="footer_rrss_form">
-          <BsLinkedin className="fs-3 mx-1 footer_rrhh_icons" />
-          <BsGithub className="fs-3 mx-1 footer_rrhh_icons" />
+          <BsLinkedin className="fs-3 mx-1 footer_rrhh_icons icon_animate_jump" />
+          <BsGithub className="fs-3 mx-1 footer_rrhh_icons icon_animate_jump" />
         </div>
         <div>
           <div className="footer_firstData_form">
             <div className="footer_personalData_form">
-              <FaMobileAlt className="fs-5" />{" "}
+            <FaMobileAlt className="fs-5 icon_animate_jump " />{" "}
               <p className="f-5"> - (+34) 648 519 656</p>
             </div>
             <div className="footer_personalData_form">
-              <BsMailbox className="fs-5" />{" "}
+             <BsMailbox className="fs-5 icon_animate_jump" />{" "}
               <p className="f-5"> - stejedas3@gmail.com</p>
             </div>
           </div>

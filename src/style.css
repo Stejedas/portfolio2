@@ -3,6 +3,7 @@
     padding: 0px 15px;
     text-decoration: none;
   }
+
   .containerDescription_skills_justify {
     display: flex;
     flex-direction: column;
@@ -11,8 +12,8 @@
   }
   .description_skills_form {
     width: 100%;
-    height: 400px;
-  
+    height: auto;
+    min-height: 400px;
   }
   .description_skills_none{
     width: 100%;
@@ -26,7 +27,8 @@
     width: 100%;
     text-align: center;
     height: 200px;
-  
+    margin-top: 25px;
+    margin-bottom: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,6 +62,16 @@
     padding-bottom: 10px;
     padding-top: 15px;
   }
+  .description_skills_columns > ul {
+    width: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
+  }
+  .description_skills_columns > ul > li {
+    text-align: justify;
+    width: 300px;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
@@ -75,8 +87,8 @@
   }
   .description_skills_form {
     width: 100%;
-    height: 400;
-    
+    height: auto;
+    min-height: 400px;
   }
   .description_skills_none{
     width: 100%;
@@ -124,6 +136,13 @@
     padding-bottom: 10px;
     padding-top: 15px;
   }
+  .description_skills_columns > ul {
+    width: 50%;
+    padding: 20px;
+  }
+  .description_skills_columns > ul > li {
+    text-align: justify;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -142,8 +161,8 @@
   }
   .description_skills_form {
     width: 100%;
-    height: 400px;
-   
+    height: auto;
+    min-height: 400px;
   }
   .description_skills_none{
     
@@ -193,6 +212,13 @@
     padding-bottom: 10px;
     padding-top: 15px;
   }
+  .description_skills_columns > ul {
+    width: 50%;
+    padding: 20px;
+  }
+  .description_skills_columns > ul > li {
+    text-align: justify;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -211,7 +237,8 @@
   }
   .description_skills_form {
     width: 60%;
-    height: 400px;
+    height: auto;
+    min-height: 400px;
   
   }
   .description_skills_none{
@@ -269,6 +296,13 @@
   }
   .none_description{
     width: 0px;
+  }
+  .description_skills_columns > ul {
+    width: 50%;
+    padding: 20px;
+  }
+  .description_skills_columns > ul > li {
+    text-align: justify;
   }
 }
 
@@ -336,19 +370,16 @@
 .description_skills_title{
   width: 100%;
   text-align: center;
+  
 }
 .description_skills_columns{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   width: 100%;
+  height: auto;
 }
-.description_skills_columns > ul {
-  width: 50%;
-  padding: 20px;
-}
-.description_skills_columns > ul > li {
-  text-align: justify;
-}
+
 
 .presentation_description_form {
   width: 65%;
@@ -670,6 +701,14 @@
     color: white;
     cursor: pointer;
 }
+.classless_link{
+  text-decoration: none;
+  color: black;
+}
+.classless_link:hover{
+  text-decoration: none;
+  color: white;
+}
 
 /* BUTTON MODAL SUBMIT */
 .modal_container_submit {
@@ -840,19 +879,22 @@
 
   /* EFECTS CONTAINERS AND MARGINS Y PADDINGS */
   .container_PicturePresentation_structure{
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: orange;
+    height: 700px;
   }
   .container_TextPresentation_structure{
-    padding-top: 90px;
+    padding-top: 120px;
     padding-bottom: 90px;
     background-color: tomato;
+    min-height: 800px;
   }
 
   .container_Skills_structure{
     padding-top: 60px;
     padding-bottom: 30px;
+    min-height: 800px;
   }
 
 
@@ -873,7 +915,18 @@
     overflow: hidden;
     border: 2px solid #adb5bd;
     color: #80858a;
+    animation: mymove 3s ease-out infinite;
+    margin-top: 10px;
   }
+  @keyframes mymove {
+    50% {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(23,23,23,0.7);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(23,23,23,0.7);
+    box-shadow: 0px 0px 20px 0px rgba(23,23,23,0.7);
+    }
+
+  }
+
   .css-button-sliding-to-bottom--sand:hover {
     color: #fff;
   }
@@ -890,4 +943,16 @@
     height: 0;
     width: 100%;
     background: #adb5bd;
+  }
+
+
+  .icon_animate_jump:hover{
+    animation: jumpMove 1s ease-out infinite;
+  
+  }
+  @keyframes jumpMove {
+    50% {
+    padding: 3px;
+    }
+
   }

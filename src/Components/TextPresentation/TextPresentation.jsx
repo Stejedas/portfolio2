@@ -34,7 +34,8 @@ function TextPresentation() {
   return (
     <>
      
-      <div className="presentation_contaienerDescription_form">
+      <div className="presentation_contaienerDescription_form" >
+      
         <div className="presentation_description_form">
         <h5>Sobre mi:</h5>
           <p>

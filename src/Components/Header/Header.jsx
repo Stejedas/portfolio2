@@ -1,4 +1,4 @@
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 import logo from "/Users/sergioylaura/Desktop/PORTFOLIO2022/proyect_portfolio/src/Assets/logo.jpg"; // cambiar por ruta src
 import '../../style.css'
 
@@ -13,8 +13,10 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav" className="header_colapseNav_justify" >
             
-              <Nav.Link href="#home" className="ov-btn-grow-skew">Home</Nav.Link>
-              <Nav.Link href="#link" className="ov-btn-grow-skew">Portfolio</Nav.Link>
+              <a href="#home" className="ov-btn-grow-skew">Home</a>
+              <a href='#sobremi' className="ov-btn-grow-skew">Sobre mi</a>
+              <a href="#skills" className="ov-btn-grow-skew">Skills</a>
+              <a href="#link" className="ov-btn-grow-skew">Portfolio</a>
              
           </Navbar.Collapse>
         </div>

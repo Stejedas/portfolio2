@@ -26,6 +26,7 @@ function HomePage() {
         className="container_TextPresentation_structure"
         data-aos="fade-right"
         data-aos-duration="2500"
+        id="sobremi"
       >
         <TextPresentation></TextPresentation>
       </div>
@@ -34,6 +35,7 @@ function HomePage() {
         className="container_Skills_structure"
         data-aos="fade-left"
         data-aos-duration="2500"
+        id='skills'
       >
         <Skills></Skills>
       </div>
