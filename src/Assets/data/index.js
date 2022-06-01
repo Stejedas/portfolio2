@@ -169,7 +169,7 @@ export const arrayProyects = [{
 }, {
   "proyectoNum": "5",
   "bg": bg6,
-  "nameProyect": "Tetris (in progress)",
+  "nameProyect": "Juego del Tetris",
   "linkGitHubFront": 'https://github.com/Stejedas/Practica-2-Tetris',
   "linkGitHubBack": "none",
   "linkWeb": 'none',

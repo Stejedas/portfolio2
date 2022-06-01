@@ -7,7 +7,7 @@ function HeaderPortfolio() {
     <>
       <Navbar bg='' expand="md" className="header_container_padding pt-2">
         <div>
-          <a href="/"><img src={logo} alt="" className="imgLogo_jusitfy" /></a>
+          <a href="/"><img src={logo} alt="" className="imgLogo_jusitfy " /></a>
         </div>
         <div className="header_colapseNav_widht">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

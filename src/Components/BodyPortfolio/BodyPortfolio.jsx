@@ -148,24 +148,24 @@ function BodyPortfolio() {
         <div className="modal_Portlofio_content">
           {linkFront !== "none" ? (
             <a href={linkFront}><div className="modal_Portlofio_justify">
-              <BsGithub />
-              <p>Front</p>
+              <BsGithub className="fs-2 pb-1"/>
+              <p className="fs-6">Front</p>
             </div></a>
           ) : (
             <></>
           )}
           {linkBack !== "none" ? (
            <a href={linkBack}> <div className="modal_Portlofio_justify">
-              <BsGithub />
-              <p>Back</p>
+              <BsGithub className="fs-2 pb-1" />
+              <p className="fs-6">Back</p>
             </div></a>
           ) : (
             <></>
           )}
           {linkWeb !== "none" ? (
             <a href={linkWeb}><div className="modal_Portlofio_justify">
-              <FiLink />
-              <p>Web</p>
+              <FiLink className="fs-2 pb-1"/>
+              <p className="fs-6" >Web</p>
             </div></a>
           ) : (
             <></>
