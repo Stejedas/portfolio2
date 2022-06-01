@@ -173,7 +173,7 @@ export const arrayProyects = [{
   "linkGitHubFront": 'https://github.com/Stejedas/Practica-2-Tetris',
   "linkGitHubBack": "none",
   "linkWeb": 'none',
-  "LengUsed": ['JavaScript', 'HTML', 'CSS'],
+  "LengUsed": ['JavaScript'],
   "yearProyect": '2022'
 }
 
