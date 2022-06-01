@@ -7,7 +7,7 @@ function Header() {
     <>
       <Navbar bg='' expand="md" className="header_container_padding pt-2" >
         <div>
-          <img src={logo} alt="" className="imgLogo_jusitfy" />
+          <a href="/"><img src={logo} alt="" className="imgLogo_jusitfy" /></a>
         </div>
         <div className="header_colapseNav_widht">
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
