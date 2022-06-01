@@ -18,6 +18,7 @@ import {
   SiVuetify,
   SiGitkraken,
 } from "react-icons/si";
+import { FaGitlab } from 'react-icons/fa'
 import { useEffect, useState } from "react";
 import { arrayAllLeng } from "../../Assets/data";
 import "animate.css";
@@ -68,6 +69,7 @@ function Skills() {
           <div className="face6 cubediv_special">
             <DiGithubBadge className="icons_cube_special" />
             <SiGitkraken className="icons_cube_special" />
+            <FaGitlab className="icons_cube_special" />
           </div>
         </div>
       );
@@ -95,6 +97,7 @@ function Skills() {
         <div className="cubediv_special">
           <DiGithubBadge className="icons_cube_special" />
           <SiGitkraken className="icons_cube_special" />
+           <FaGitlab className="icons_cube_special" />
         </div>
       );
     } else if (value === "cube_stop_js") {
@@ -151,7 +154,7 @@ function Skills() {
   return (
     <>
       <div className="container_skills" >
-        <h3>Skills</h3>
+        <h3 >Skills</h3>
         <div className="containerDescription_skills_justify">
           <div className="listSkills_skills_display">
             {arrayAllLeng
