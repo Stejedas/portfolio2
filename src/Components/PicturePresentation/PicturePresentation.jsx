@@ -58,7 +58,7 @@ function PicturePresentation (){
         title="Contacto"
         onCancel={() => setVisible(false)}
         width={800}
-        style={{ "margin-top": "10px" }}
+        style={{ "margin-top": "10px", 'background-color': "#2b2e42" }}
         footer={null}
       >
         <div className="container_modal_direction">
@@ -72,6 +72,7 @@ function PicturePresentation (){
                 type="text"
                 maxlength="100"
                 className="prueba2"
+                placeholder="Nombre"
               />
             </li>
             <li>
@@ -84,6 +85,7 @@ function PicturePresentation (){
                 className="prueba2"
                 id="email" 
                 name="reply_to"
+                placeholder="Email"
               />
             </li>
             <li>
@@ -94,6 +96,7 @@ function PicturePresentation (){
                 style={{ height: "200px" }}
                 id="message" 
                 name="message" 
+                placeholder="Su mensaje aquí..."
               ></textarea>
             </li>
             <div className="modal_contact_buttons">
@@ -126,7 +129,7 @@ function PicturePresentation (){
               download="CV_Sergio_Tejeda.pdf"
               className="animate__animated animate__heartBeat"
             >
-              <BsFillFileEarmarkPersonFill fontSize={60} color={"grey"} />
+              <BsFillFileEarmarkPersonFill fontSize={60} color={"white"} />
             </a>
           </div>
         </div>

@@ -100,6 +100,7 @@ function TextPresentation() {
                 type="text"
                 maxlength="100"
                 className="prueba2"
+                placeholder="Nombre"
               />
             </li>
             <li>
@@ -107,7 +108,7 @@ function TextPresentation() {
               <input
                 required
                 type="email"
-               
+               placeholder="Email"
                 maxlength="100"
                 className="prueba2"
                 id="email" 
@@ -122,6 +123,7 @@ function TextPresentation() {
                 style={{ height: "200px" }}
                 id="message" 
                 name="message" 
+                placeholder="Su mensaje aquí..."
               ></textarea>
             </li>
             <div className="modal_contact_buttons">
@@ -154,7 +156,7 @@ function TextPresentation() {
               download="CV_Sergio_Tejeda.pdf"
               className="animate__animated animate__heartBeat"
             >
-              <BsFillFileEarmarkPersonFill fontSize={60} color={"grey"} />
+              <BsFillFileEarmarkPersonFill fontSize={60} color={"white"} />
             </a>
           </div>
         </div>

@@ -56,11 +56,13 @@ html {
     display: flex;
     flex-direction: column-reverse;
     padding: 10px;
+    background-color: #133B5C;
   }
   .contact_Form_form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    
   }
   .container_modal_downloadCV {
     display: flex;
@@ -472,7 +474,7 @@ html {
 
 .imgLogo_jusitfy{
   width: 70px;
-  
+  border-radius: 50%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -552,7 +554,8 @@ html {
   float: left;
   position: absolute;
   margin-top: -22px;
-  background: #ffffff;
+  background: #133B5C;
+  color: white;
   height: 14px;
   padding: 2px 20px 2px 20px;
   margin-left: 10px;
@@ -572,15 +575,22 @@ html {
   outline: none;
   border: none;
   height: 25px;
+  color: white;
   line-height: 25px;
   font-size: 16px;
   padding: 0px 20px;
   margin: 5px 0px;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
+::placeholder {
+  color: white;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 .prueba2 {
   width: 100%;
+  background-color: #133B5C;
+ 
 }
 .modal_contact_buttons {
   width: 100%;
@@ -1089,6 +1099,9 @@ html {
   
 }
 
+.container_modal_downloadCV > h5 {
+  color: white
+}
 .button-container-2 {
   position: relative;
  
@@ -1249,6 +1262,7 @@ html {
 .icon_portfolio{
   width: 5vw;
   height: 5vw;
+  margin: 10px;
 }
 
 
@@ -1314,4 +1328,17 @@ html {
     height: 290px;
     opacity: 0;
   }
+}
+
+.ant-modal-header{
+  background-color: #2b2e42;
+ 
+}
+
+.ant-modal-title{
+  color: white;
+}
+.ant-modal-body{
+  background-color: #133B5C;
+  color: white
 }

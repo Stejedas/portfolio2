@@ -1,5 +1,5 @@
 import { Navbar } from "react-bootstrap";
-import logo from "/Users/sergioylaura/Desktop/PORTFOLIO2022/proyect_portfolio/src/Assets/logo.jpg"; // cambiar por ruta src
+import logo from "/Users/sergioylaura/Desktop/PORTFOLIO2022/proyect_portfolio/src/Assets/logo.png"; // cambiar por ruta src
 import '../../style.css'
 
 function Header() {

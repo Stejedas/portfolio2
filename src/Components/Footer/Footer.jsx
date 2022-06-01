@@ -90,6 +90,7 @@ function Footer() {
                 type="text"
                 maxlength="100"
                 className="prueba2"
+                placeholder="Nombre"
               />
             </li>
             <li>
@@ -97,7 +98,7 @@ function Footer() {
               <input
                 required
                 type="email"
-               
+               placeholder="Email"
                 maxlength="100"
                 className="prueba2"
                 id="email" 
@@ -112,6 +113,7 @@ function Footer() {
                 style={{ height: "200px" }}
                 id="message" 
                 name="message" 
+                placeholder="Su mensaje aquí..."
               ></textarea>
             </li>
             <div className="modal_contact_buttons">
@@ -120,6 +122,7 @@ function Footer() {
                   key="back"
                   onClick={handleCancel}
                   className="modal_cancel_contact"
+            
                 >
                   <span> Cancelar </span>
                 </button>
@@ -130,6 +133,7 @@ function Footer() {
                   type="submit"
                   loading={loading}
                   className="modal_submit_contact"
+                 
                 >
                   <span> Enviar </span>
                 </button>
@@ -144,7 +148,7 @@ function Footer() {
               download="CV_Sergio_Tejeda.pdf"
               className="animate__animated animate__heartBeat"
             >
-              <BsFillFileEarmarkPersonFill fontSize={60} color={"grey"} />
+              <BsFillFileEarmarkPersonFill fontSize={60} color={"white"} />
             </a>
           </div>
         </div>
