@@ -102,7 +102,16 @@ export const arrayAllLeng = [
   },
   {
     name: "GIT",
-    skills: ["", ""],
+    skills: [
+      "Conocimientos sobre GitHub, SourceTree, GitKraken, GitLab",
+      "Conceptos sobre repositorios de código", 
+      "Control de versiones",
+      "Comandos: Commit, push, fetch, reset,...",
+      "Creacion y uso de ramas",
+      "Pull Request,...",
+      "Repositorios remotos y online",
+      "Clonación de repositos, fork,..."
+    ],
     logo: "",
     "class": "cube_stop_git" 
   },

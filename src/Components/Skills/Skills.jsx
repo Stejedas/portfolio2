@@ -181,17 +181,18 @@ function Skills() {
                 );
               })}
           </div>
-          <div className={`animationcube_skills_form ${selectedSkill}_cube`}>
+          <div className={`animationcube_skills_form none_cube`}> {/* ${selectedSkill}_cube esto para si hay cuadro con definicion de skills */}
             <div className="animation_cube_position ">
               {cubeChangeSkills(classUnicCube)}
             </div>
           </div>
-
-          <div
+{
+        /*  <div
             className={`description_skills_form ${selectedSkill}_description`}
           >
             {descriptionSkills(arraySeeSkill?.name)}
           </div>
+          */}
         </div>
       </div>
       <div className="container_skills_form"></div>

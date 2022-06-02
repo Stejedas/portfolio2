@@ -4,6 +4,7 @@
 }
 
 html {
+  width: 100%;
   min-height: 100%;
   position: relative;
 }
@@ -380,7 +381,8 @@ html {
     padding-top: 15px;
   }
   .none_cube{
-    width: 100%
+    width: 100%;
+    margin-top: 50px
   }
   .none_description{
     width: 0px;
@@ -420,6 +422,7 @@ html {
   height: 250px;
   justify-content: center;
 }
+
 .presentation_img_form {
   border-radius: 32px 100px 36px 100px;
   margin-top: 30px;
@@ -781,6 +784,11 @@ html {
   align-items: center;
   justify-content: center;
 }
+.icon_footer_color{
+  color: white;
+  text-decoration-color: none;
+  text-decoration: none;
+}
 
 /* BUTTON CONTACT */
 .container_button_contact {
@@ -849,8 +857,9 @@ html {
   top: 0;
 }
 
-.footer_rrhh_icons:hover{
+.footer_rrhh_icons{
     color: white;
+    text-decoration: none;
     cursor: pointer;
 }
 .classless_link{
@@ -1004,7 +1013,7 @@ html {
   z-index: 1;
   overflow: hidden;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 2px;
   }
   .ov-btn-grow-skew:hover {
   color: #393939;/* color de fuente hover */
@@ -1106,8 +1115,13 @@ html {
 
   .icon_animate_jump:hover{
     animation: jumpMove 1s ease-out infinite;
+    text-decoration: none;
+    color: white;
   
   }
+  
+
+
   @keyframes jumpMove {
     50% {
     padding: 3px;

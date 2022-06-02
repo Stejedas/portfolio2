@@ -39,17 +39,17 @@ function Footer() {
     <>
       <footer className="footer_container_form">
         <div className="footer_rrss_form">
-          <BsLinkedin className="fs-3 mx-1 footer_rrhh_icons icon_animate_jump" />
-          <BsGithub className="fs-3 mx-1 footer_rrhh_icons icon_animate_jump" />
+          <a href="https://www.linkedin.com/in/sergio-tejeda-s%C3%A1nchez-de-la-morena-1b4b06b2/"  target="_blank" rel="noreferrer" className="icon_footer_color"><BsLinkedin className="fs-3 mx-1 footer_rrhh_icons icon_animate_jump" /></a>
+          <a href="https://github.com/Stejedas" className="icon_footer_color"  target="_blank" rel="noreferrer"><BsGithub className="fs-3 mx-1 footer_rrhh_icons icon_animate_jump" /></a>
         </div>
         <div>
           <div className="footer_firstData_form">
             <div className="footer_personalData_form">
-            <FaMobileAlt className="fs-5 icon_animate_jump " />{" "}
+            <a href="tel:+34648519656" className="icon_footer_color"><FaMobileAlt className="fs-5 icon_animate_jump " /></a>{" "}
               <p className="f-5"> - (+34) 648 519 656</p>
             </div>
             <div className="footer_personalData_form">
-             <BsMailbox className="fs-5 icon_animate_jump" />{" "}
+            <a href="mailto:stejedas@gmail.com" className="icon_footer_color" target="_blank" rel="noreferrer"><BsMailbox className="fs-5 icon_animate_jump" /></a>{" "}
               <p className="f-5"> - stejedas3@gmail.com</p>
             </div>
           </div>
